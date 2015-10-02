@@ -22,8 +22,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="container">
+  <body ng-app="PizzaApp">
+    <div class="container" ng-controller="PizzaCtrl">
 
       <div class="white-background top-block">
         <h1>
@@ -37,7 +37,7 @@
 
       <div class="white-background minute-display">
         <p class="lead">The average dominos order is currently taking</p>
-        <span class="time-taken red-text">0</span>
+        <span class="time-taken red-text">{{ avgwait }}</span>
         <p class="lead">Minutes</p>
       </div>
 
@@ -52,10 +52,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>12345667</td>
-              <td>Baking</td>
-              <td>4 minutes ago</td>
+            <tr ng-repeat="order in orders">
+              <td>{{ order.order_id }}</td>
+              <td>{{ order.order_status }}</td>
+              <td>{{ order.updated }}</td>
             </tr>
           </tbody>
         </table>
@@ -67,5 +67,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
   </body>
 </html>

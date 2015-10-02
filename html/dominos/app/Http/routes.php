@@ -14,3 +14,6 @@
 $app->get('/', function () use ($app) {
     return view('index');
 });
+
+$app->get('/api/orders', 'OrderController@index');
+$app->get('/api/average_wait', 'OrderController@avgwait');
