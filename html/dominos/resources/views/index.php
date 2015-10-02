@@ -34,12 +34,12 @@
         </h1>
         <p class="lead">
           It can be difficult waiting for pizza - it's so tasty! Everyone loves pizza trackers, but how long will it take?<br />
-          We're here to help, we'll tell you on average - how long your dominos order will take!
+          We're here to help, we'll tell you on average - how long your Dominos order will take!
         </p>
       </div>
 
       <div class="white-background minute-display">
-        <p class="lead">The average dominos order is currently taking</p>
+        <p class="lead">The average Dominos order is currently taking</p>
         <span class="time-taken red-text">{{ avgwait }}</span>
         <p class="lead">Minutes</p>
       </div>
