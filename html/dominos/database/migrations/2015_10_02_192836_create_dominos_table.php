@@ -16,8 +16,7 @@ class CreateDominosTable extends Migration
           $table->increments('id');
           $table->integer('order_id');
           $table->integer('current_order_status');
-          $table->dateTime('created_at');
-          $table->dateTime('last_updated_at');
+          $table->timestamps();
         });
     }
 
